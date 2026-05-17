@@ -1,0 +1,75 @@
+<section class="page-hero compact">
+  <span class="eyebrow">Oportunidad</span>
+  <h1>La oportunidad: cerrar la brecha entre formación y empleo</h1>
+  <p>
+    Medellín cuenta con jóvenes, estudiantes y egresados que buscan insertarse en el mercado laboral, pero muchas veces existe
+    una desconexión entre lo que aprenden y las habilidades que realmente están demandando las empresas.
+  </p>
+  <p>
+    Esta brecha afecta el acceso al primer empleo, aumenta la frustración de los jóvenes, dificulta la contratación para las
+    empresas y limita la productividad del ecosistema local.
+  </p>
+</section>
+
+<section class="section">
+  <div class="section-image">
+    <img
+      src="assets/images/oportunidad-brecha-habilidades.png"
+      alt="Jóvenes analizando datos y oportunidades laborales como representación de la brecha entre formación y empleo."
+    />
+    <div class="image-caption">
+      La oportunidad surge al conectar mejor la formación de los jóvenes con las habilidades que demanda el mercado laboral.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Datos clave</span>
+    <h2>Datos clave del problema</h2>
+  </div>
+  <div class="card-grid two">
+    <article class="info-card stat-card" *ngFor="let card of dataCards">
+      <span class="badge">Problema</span>
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.text }}</p>
+      <small *ngIf="card.source">Fuente: {{ card.source }}</small>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Actores afectados</span>
+    <h2>Quiénes viven las consecuencias</h2>
+  </div>
+  <div class="card-grid two">
+    <article class="info-card" *ngFor="let actor of actors">
+      <span class="badge">{{ actor.badge }}</span>
+      <h3>{{ actor.title }}</h3>
+      <p>{{ actor.text }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Causas principales</span>
+    <h2>Qué mantiene abierta la brecha</h2>
+  </div>
+  <ul class="check-list">
+    <li *ngFor="let cause of causes">{{ cause }}</li>
+  </ul>
+</section>
+
+<section class="section">
+  <div class="highlight-banner">
+    <div class="highlight-banner-top">
+      <span class="eyebrow light">Reto central</span>
+      <span class="highlight-banner-mark">01</span>
+    </div>
+    <div class="highlight-banner-content">
+      <h2>El reto no es solo encontrar empleo; es saber qué habilidades faltan para acceder a mejores oportunidades.</h2>
+    </div>
+  </div>
+</section>

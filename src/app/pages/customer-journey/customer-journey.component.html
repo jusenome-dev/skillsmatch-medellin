@@ -1,0 +1,130 @@
+<section class="page-hero compact">
+  <span class="eyebrow">Cliente y Journey Map</span>
+  <h1>Cliente y Journey Map</h1>
+  <p>
+    Para diseñar una solución útil, SkillsMatch Medellín parte de una persona usuaria concreta. Esta representación permite
+    entender sus necesidades, frustraciones, motivaciones y el recorrido que vive al intentar ingresar al mercado laboral.
+  </p>
+</section>
+
+<section class="section">
+  <div class="section-image">
+    <img
+      src="assets/images/cliente-camila-restrepo.png"
+      alt="Representación visual de Camila Restrepo, joven egresada que busca su primer empleo formal."
+    />
+    <div class="image-caption">
+      Camila representa a jóvenes egresados que necesitan claridad sobre sus habilidades y oportunidades.
+    </div>
+  </div>
+</section>
+
+<section class="persona-section">
+  <article class="persona-card">
+    <span class="avatar">CR</span>
+    <div>
+      <span class="eyebrow">Persona usuaria</span>
+      <h2>{{ persona.name }}</h2>
+      <p>{{ persona.description }}</p>
+    </div>
+  </article>
+
+  <aside class="persona-facts">
+    <div><strong>Edad</strong><span>{{ persona.age }}</span></div>
+    <div><strong>Ubicación</strong><span>{{ persona.location }}</span></div>
+    <div><strong>Perfil</strong><span>{{ persona.profile }}</span></div>
+    <div><strong>Situación actual</strong><span>{{ persona.currentSituation }}</span></div>
+    <div><strong>Dispositivos</strong><span>{{ persona.devices }}</span></div>
+    <div><strong>Canales digitales</strong><span>{{ persona.channels }}</span></div>
+  </aside>
+</section>
+
+<section class="section">
+  <div class="persona-grid">
+    <article class="info-card">
+      <span class="badge">Necesidades</span>
+      <ul class="check-list compact">
+        <li *ngFor="let item of needs">{{ item }}</li>
+      </ul>
+    </article>
+    <article class="info-card">
+      <span class="badge">Frustraciones</span>
+      <ul class="check-list compact">
+        <li *ngFor="let item of frustrations">{{ item }}</li>
+      </ul>
+    </article>
+    <article class="info-card">
+      <span class="badge">Motivaciones</span>
+      <ul class="check-list compact">
+        <li *ngFor="let item of motivations">{{ item }}</li>
+      </ul>
+    </article>
+    <article class="info-card">
+      <span class="badge">Objetivos</span>
+      <ul class="check-list compact">
+        <li *ngFor="let item of goals">{{ item }}</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-image">
+    <img
+      src="assets/images/journey-map-camila.png"
+      alt="Sesión de orientación donde se construye el recorrido profesional de una joven usuaria."
+    />
+    <div class="image-caption">
+      El journey map permite entender el recorrido emocional y práctico del usuario antes de diseñar la solución.
+    </div>
+  </div>
+
+  <div class="section-heading">
+    <span class="eyebrow">Journey Map</span>
+    <h2>Recorrido de Camila hacia su primer empleo formal</h2>
+  </div>
+  <div class="journey-table">
+    <article class="journey-row" *ngFor="let step of steps; let index = index">
+      <div class="journey-stage">
+        <span>{{ index + 1 }}</span>
+        <h3>{{ step.stage }}</h3>
+      </div>
+      <div>
+        <strong>Qué hace</strong>
+        <p>{{ step.action }}</p>
+      </div>
+      <div>
+        <strong>Qué siente</strong>
+        <p>{{ step.feeling }}</p>
+      </div>
+      <div>
+        <strong>Dolor</strong>
+        <p>{{ step.pain }}</p>
+      </div>
+      <div>
+        <strong>Oportunidad para SkillsMatch</strong>
+        <p>{{ step.opportunity }}</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="highlight-banner">
+    <div class="highlight-banner-top">
+      <span class="eyebrow light">Momento crítico</span>
+      <span class="highlight-banner-mark">!</span>
+    </div>
+    <div class="highlight-banner-content">
+      <p>
+        El momento más crítico ocurre cuando Camila aplica a muchas vacantes y no recibe respuesta. En ese punto no sabe si el
+        problema está en su hoja de vida, en sus habilidades, en su falta de experiencia o en que está aplicando a ofertas poco
+        compatibles.
+      </p>
+      <h2>
+        Comprender este recorrido permite diseñar una solución centrada en el usuario, donde la tecnología no solo muestra
+        vacantes, sino que orienta, diagnostica, recomienda y acompaña el proceso de empleabilidad.
+      </h2>
+    </div>
+  </div>
+</section>

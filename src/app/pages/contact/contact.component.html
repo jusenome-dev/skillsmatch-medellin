@@ -1,0 +1,97 @@
+<section class="page-hero compact">
+  <span class="eyebrow">Contacto</span>
+  <h1>Contacto</h1>
+  <p class="hero-lead">Conversemos sobre talento, formación y oportunidades laborales reales.</p>
+  <p>
+    SkillsMatch Medellín está abierto a conversaciones con empresas, instituciones educativas, docentes, estudiantes, mentores
+    y posibles aliados interesados en validar, fortalecer o acompañar la propuesta.
+  </p>
+</section>
+
+<section class="section contact-visual">
+  <div class="section-image">
+    <img
+      src="assets/images/contacto-alianzas-ecosistema.png"
+      alt="Encuentro entre actores del ecosistema para generar alianzas alrededor de empleabilidad juvenil."
+    />
+    <div class="image-caption">
+      Las alianzas son clave para validar, fortalecer y escalar la solución.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Interés</span>
+    <h2>¿Quiénes pueden contactarnos?</h2>
+  </div>
+  <div class="card-grid two">
+    <article class="info-card" *ngFor="let audience of audiences">
+      <span class="badge">Contacto</span>
+      <h3>{{ audience.title }}</h3>
+      <p>{{ audience.text }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section contact-layout">
+  <form class="static-form">
+    <span class="eyebrow">Formulario</span>
+    <h2>Enviar mensaje</h2>
+    <label>
+      Nombre completo
+      <input type="text" placeholder="Tu nombre completo" />
+    </label>
+    <label>
+      Correo electrónico
+      <input type="email" placeholder="nombre@correo.com" />
+    </label>
+    <label>
+      Organización o institución
+      <input type="text" placeholder="Empresa, institución o independiente" />
+    </label>
+    <label>
+      Cargo o rol
+      <input type="text" placeholder="Tu rol actual" />
+    </label>
+    <label>
+      Tipo de interés
+      <select>
+        <option>Validar prototipo</option>
+        <option>Alianza institucional</option>
+        <option>Publicar vacantes</option>
+        <option>Mentoría o acompañamiento</option>
+      </select>
+    </label>
+    <label>
+      Mensaje
+      <textarea rows="5" placeholder="Cuéntanos cómo te gustaría participar o aportar"></textarea>
+    </label>
+    <button class="btn primary" type="button">Enviar mensaje</button>
+    <small>Formulario demostrativo para fines académicos. En una versión funcional se conectaría con un servicio de correo o CRM.</small>
+  </form>
+
+  <aside class="contact-details">
+    <span class="eyebrow">Datos</span>
+    <h2>Datos de contacto</h2>
+    <article *ngFor="let detail of contactDetails">
+      <strong>{{ detail.label }}</strong>
+      <span>{{ detail.value }}</span>
+    </article>
+  </aside>
+</section>
+
+<section class="section">
+  <div class="highlight-banner">
+    <div class="highlight-banner-top">
+      <span class="eyebrow light">Llamado final</span>
+      <span class="highlight-banner-mark">→</span>
+    </div>
+    <div class="highlight-banner-content">
+      <h2>
+        Si una ciudad quiere conectar mejor su talento con las oportunidades, necesita entender sus brechas de habilidades.
+        SkillsMatch Medellín propone empezar por ahí.
+      </h2>
+    </div>
+  </div>
+</section>

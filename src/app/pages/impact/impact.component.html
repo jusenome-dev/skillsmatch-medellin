@@ -1,0 +1,121 @@
+<section class="page-hero compact">
+  <span class="eyebrow">Impacto</span>
+  <h1>Impacto del proyecto</h1>
+  <p class="hero-lead">Una solución con impacto en jóvenes, empresas, instituciones y ciudad.</p>
+  <p>
+    SkillsMatch Medellín busca generar impacto social y económico al mejorar la conexión entre talento joven, formación
+    pertinente y oportunidades laborales reales. Su aporte no se limita a facilitar la búsqueda de empleo; también permite
+    producir información útil para tomar mejores decisiones educativas, empresariales y públicas.
+  </p>
+</section>
+
+<section class="section">
+  <div class="section-image">
+    <img
+      src="assets/images/impacto-social-skillsmatch.png"
+      alt="Grupo diverso colaborando en un entorno tecnológico como símbolo del impacto social y laboral de SkillsMatch Medellín."
+    />
+    <div class="image-caption">
+      El impacto esperado se refleja en mejores decisiones de formación, empleabilidad juvenil y conexión con empresas.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Jóvenes</span>
+    <h2>Impacto en jóvenes</h2>
+  </div>
+  <div class="impact-grid five">
+    <article class="impact-card" *ngFor="let card of youthImpact; let index = index">
+      <span class="badge">{{ index + 1 }}</span>
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.text }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Empresas</span>
+    <h2>Impacto en empresas</h2>
+  </div>
+  <div class="impact-grid">
+    <article class="impact-card" *ngFor="let card of companyImpact; let index = index">
+      <span class="badge">{{ index + 1 }}</span>
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.text }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Educación</span>
+    <h2>Impacto en instituciones educativas</h2>
+  </div>
+  <div class="impact-grid">
+    <article class="impact-card" *ngFor="let card of educationImpact; let index = index">
+      <span class="badge">{{ index + 1 }}</span>
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.text }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Ciudad</span>
+    <h2>Impacto en Medellín</h2>
+  </div>
+  <div class="impact-grid">
+    <article class="impact-card" *ngFor="let card of cityImpact; let index = index">
+      <span class="badge">{{ index + 1 }}</span>
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.text }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Medición</span>
+    <h2>Indicadores propuestos</h2>
+  </div>
+  <div class="indicator-table">
+    <article class="indicator-row" *ngFor="let indicator of indicators">
+      <strong>{{ indicator.name }}</strong>
+      <p>{{ indicator.description }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Horizonte</span>
+    <h2>Impacto esperado en el tiempo</h2>
+  </div>
+  <div class="time-grid">
+    <article class="time-card" *ngFor="let period of timeImpact">
+      <h3>{{ period.title }}</h3>
+      <ul class="check-list compact">
+        <li *ngFor="let item of period.items">{{ item }}</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="highlight-banner">
+    <div class="highlight-banner-top">
+      <span class="eyebrow light">Cierre</span>
+      <span class="highlight-banner-mark">✓</span>
+    </div>
+    <div class="highlight-banner-content">
+      <h2>
+        El impacto de SkillsMatch Medellín está en convertir la información dispersa sobre habilidades, formación y empleo en una
+        ruta clara para que los jóvenes tomen mejores decisiones y las empresas encuentren talento más pertinente.
+      </h2>
+    </div>
+  </div>
+</section>

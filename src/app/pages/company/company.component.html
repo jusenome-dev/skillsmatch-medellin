@@ -1,0 +1,82 @@
+<section class="page-hero compact">
+  <span class="eyebrow">Sobre la empresa</span>
+  <h1>Sobre SkillsMatch Medellín</h1>
+  <p class="hero-lead">Una empresa de base tecnológica orientada a conectar talento, formación y empleo.</p>
+  <p>
+    SkillsMatch Medellín es una propuesta de empresa de base tecnológica que busca mejorar la empleabilidad juvenil mediante
+    una plataforma digital centrada en habilidades. La solución combina diagnóstico, analítica, rutas de formación y matching
+    con oportunidades laborales para reducir la desconexión entre lo que aprenden los jóvenes y lo que realmente exige el mercado.
+  </p>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Empresa</span>
+    <h2>¿Qué es SkillsMatch Medellín?</h2>
+  </div>
+  <div class="narrative-card">
+    <p>
+      SkillsMatch Medellín es una plataforma digital que permite a jóvenes, estudiantes y egresados construir un perfil de
+      habilidades, identificar brechas frente a roles laborales, recibir recomendaciones de formación y acceder a oportunidades
+      más compatibles con su perfil. Para empresas e instituciones, la plataforma ofrece información útil sobre talento, brechas
+      de habilidades y tendencias de formación.
+    </p>
+  </div>
+</section>
+
+<section class="section company-visual">
+  <div class="image-placeholder wide">
+    <img
+      src="assets/images/sobre-empresa-talento-formacion-empleo.png"
+      alt="Jóvenes analizando datos y oportunidades laborales como representación de la brecha entre formación y empleo."
+    />
+  </div>
+</section>
+
+<section class="section">
+  <div class="card-grid">
+    <article class="info-card featured" *ngFor="let pillar of pillars">
+      <span class="badge">{{ pillar.title }}</span>
+      <h3>{{ pillar.title }}</h3>
+      <p>{{ pillar.text }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Tecnología</span>
+    <h2>Enfoque como empresa de base tecnológica</h2>
+  </div>
+  <div class="narrative-card">
+    <p>
+      La propuesta se considera de base tecnológica porque su valor principal se apoya en una plataforma digital, analítica de
+      datos, perfilamiento de habilidades, recomendación inteligente y visualización de brechas. La tecnología no se usa solo
+      como canal, sino como núcleo de la solución para transformar información en decisiones útiles.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Diseño</span>
+    <h2>Principios de diseño</h2>
+  </div>
+  <div class="card-grid">
+    <article class="info-card" *ngFor="let principle of principles">
+      <span class="badge">Principio</span>
+      <h3>{{ principle.title }}</h3>
+      <p>{{ principle.text }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Ecosistema</span>
+    <h2>Aliados potenciales</h2>
+  </div>
+  <div class="logo-grid">
+    <div class="logo-placeholder" *ngFor="let ally of allies">{{ ally }}</div>
+  </div>
+</section>

@@ -1,0 +1,107 @@
+<section class="page-hero compact">
+  <span class="eyebrow">Propuesta de valor</span>
+  <h1>Propuesta de valor</h1>
+  <p class="hero-lead">Una solución centrada en las habilidades reales de los jóvenes y en las necesidades del mercado laboral.</p>
+  <p>
+    SkillsMatch Medellín parte de una pregunta central: ¿cómo ayudar a jóvenes, estudiantes y egresados a entender qué
+    habilidades tienen, qué habilidades les faltan y qué oportunidades laborales se ajustan mejor a su perfil?
+  </p>
+  <p>
+    Para responder a esta pregunta, la propuesta de valor conecta los dolores del usuario con servicios tecnológicos concretos
+    que orientan, diagnostican y acompañan su proceso de empleabilidad.
+  </p>
+</section>
+
+<section class="section">
+  <div class="highlight-banner">
+    <div class="highlight-banner-top">
+      <span class="eyebrow light">Propuesta principal</span>
+      <span class="highlight-banner-mark">PV</span>
+    </div>
+    <div class="highlight-banner-content">
+      <h2>
+        SkillsMatch Medellín ayuda a jóvenes, estudiantes y egresados a identificar sus habilidades, cerrar brechas de formación
+        y conectarse con oportunidades laborales reales mediante una plataforma digital de matching inteligente, rutas de
+        aprendizaje y analítica del mercado laboral.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-image">
+    <img
+      src="assets/images/propuesta-valor-skillsmatch.png"
+      alt="Asesoría personalizada sobre habilidades, rutas de formación y oportunidades laborales."
+    />
+    <div class="image-caption">
+      La propuesta de valor conecta las necesidades del usuario con servicios concretos de diagnóstico, formación y matching.
+    </div>
+  </div>
+</section>
+
+<section class="section value-canvas">
+  <article class="value-column">
+    <div class="section-heading">
+      <span class="eyebrow">Columna 1</span>
+      <h2>Perfil del cliente: Camila Restrepo</h2>
+    </div>
+    <div class="value-block" *ngFor="let block of customerBlocks">
+      <h3>{{ block.title }}</h3>
+      <ul class="check-list compact">
+        <li *ngFor="let item of block.items">{{ item }}</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="value-column accent">
+    <div class="section-heading">
+      <span class="eyebrow">Columna 2</span>
+      <h2>Mapa de valor de SkillsMatch Medellín</h2>
+    </div>
+    <div class="value-block" *ngFor="let block of valueBlocks">
+      <h3>{{ block.title }}</h3>
+      <ul class="check-list compact">
+        <li *ngFor="let item of block.items">{{ item }}</li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Encaje</span>
+    <h2>Encaje entre cliente y solución</h2>
+    <p>
+      El encaje se da porque SkillsMatch Medellín no se limita a mostrar vacantes. La plataforma interpreta el perfil del
+      usuario, identifica brechas, recomienda rutas de aprendizaje y muestra oportunidades con mayor nivel de compatibilidad.
+    </p>
+    <p>
+      De esta manera, el valor no está solo en el acceso a información, sino en convertir esa información en una ruta clara y
+      accionable para mejorar la empleabilidad.
+    </p>
+  </div>
+  <div class="fit-grid">
+    <article class="fit-card" *ngFor="let card of fitCards">
+      <span class="badge">Dolor</span>
+      <h3>“{{ card.pain }}”</h3>
+      <strong>Respuesta</strong>
+      <p>{{ card.response }}.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="highlight-banner">
+    <div class="highlight-banner-top">
+      <span class="eyebrow light">Cierre</span>
+      <span class="highlight-banner-mark">✓</span>
+    </div>
+    <div class="highlight-banner-content">
+      <h2>
+        El valor de SkillsMatch Medellín no está en publicar más vacantes, sino en orientar mejor a cada persona para que pueda
+        acercarse a oportunidades reales.
+      </h2>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">Emprendimiento de base tecnológica</span>
+    <h1>{{ project.name }}</h1>
+    <p class="hero-lead">{{ project.tagline }}</p>
+    <p>{{ project.description }}</p>
+    <p>{{ project.extendedDescription }}</p>
+    <div class="actions">
+      <a class="btn primary" routerLink="/oportunidad">Ver oportunidad</a>
+      <a class="btn ghost" routerLink="/propuesta-de-valor">Conocer propuesta de valor</a>
+      <a class="btn ghost" routerLink="/prototipo">Explorar prototipo</a>
+    </div>
+  </div>
+
+  <div class="visual-card hero-visual">
+    <img
+      src="assets/images/inicio-hero-skillsmatch.png"
+      alt="Joven en un espacio moderno de trabajo usando tecnología para conectar formación, habilidades y oportunidades laborales."
+    />
+    <div class="image-overlay">
+      <strong>Talento + Formación + Mercado</strong>
+      <span>Portada visual del proyecto SkillsMatch Medellín.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Origen del proyecto</span>
+    <h2>¿Por qué nace SkillsMatch Medellín?</h2>
+  </div>
+  <div class="narrative-card">
+    <p>
+      El proyecto nace de una preocupación real: muchos jóvenes estudian, se esfuerzan y terminan sus procesos de formación,
+      pero al salir al mercado laboral encuentran vacantes que piden habilidades, experiencia o conocimientos que no siempre
+      fueron claros durante su formación.
+    </p>
+    <p>
+      El problema no es únicamente la falta de empleo, sino la desconexión entre lo que las personas aprenden, lo que las
+      empresas necesitan y la poca orientación que tienen los jóvenes para cerrar esas brechas.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Tres pilares</span>
+    <h2>La solución en una ruta clara</h2>
+  </div>
+  <div class="card-grid">
+    <article class="info-card" *ngFor="let pillar of pillars">
+      <span class="badge">{{ pillar.badge }}</span>
+      <h3>{{ pillar.title }}</h3>
+      <p>{{ pillar.text }}</p>
+    </article>
+  </div>
+</section>

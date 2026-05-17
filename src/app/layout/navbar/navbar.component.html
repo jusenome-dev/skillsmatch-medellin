@@ -1,0 +1,27 @@
+<header class="site-header">
+  <a class="brand" routerLink="/" (click)="closeMenu()" aria-label="Ir al inicio">
+    <span class="brand-mark">SM</span>
+    <span>
+      <strong>SkillsMatch</strong>
+      <small>Medellín</small>
+    </span>
+  </a>
+
+  <button class="menu-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isOpen" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="nav-links" [class.open]="isOpen" aria-label="Menú principal">
+    <a
+      *ngFor="let item of navItems"
+      [routerLink]="item.path"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+      (click)="closeMenu()"
+    >
+      {{ item.label }}
+    </a>
+  </nav>
+</header>

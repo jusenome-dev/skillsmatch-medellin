@@ -1,0 +1,50 @@
+<section class="page-hero compact">
+  <span class="eyebrow">Soluciones existentes</span>
+  <h1>Soluciones existentes y referentes internacionales</h1>
+  <p>
+    Antes de diseñar SkillsMatch Medellín, se revisaron soluciones, estudios y referentes internacionales relacionados con
+    empleabilidad juvenil, job matching, skills matching, formación orientada por demanda e inteligencia de habilidades.
+  </p>
+  <p>
+    Estos documentos permiten identificar aprendizajes para construir una solución tecnológica más sólida y evitar partir de cero.
+  </p>
+</section>
+
+<section class="section">
+  <div class="section-image">
+    <img
+      src="assets/images/soluciones-existentes-referentes.png"
+      alt="Equipo revisando referentes internacionales y soluciones tecnológicas para empleabilidad y formación."
+    />
+    <div class="image-caption">
+      El rastreo de soluciones permite diseñar SkillsMatch Medellín a partir de evidencias y aprendizajes existentes.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="reference-grid">
+    <article class="reference-card" *ngFor="let solution of solutions">
+      <span class="badge">{{ solution.organization }}</span>
+      <h3>{{ solution.document }}</h3>
+      <dl>
+        <dt>Aporte</dt>
+        <dd>{{ solution.contribution }}</dd>
+        <dt>Aprendizaje para SkillsMatch</dt>
+        <dd>{{ solution.learning }}</dd>
+        <dt>Fuente</dt>
+        <dd>{{ solution.source }}</dd>
+      </dl>
+    </article>
+  </div>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Síntesis</span>
+    <h2>Aprendizajes clave para SkillsMatch Medellín</h2>
+  </div>
+  <ul class="check-list">
+    <li *ngFor="let learning of learnings">{{ learning }}</li>
+  </ul>
+</section>

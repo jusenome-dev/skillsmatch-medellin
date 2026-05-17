@@ -1,0 +1,80 @@
+<section class="page-hero compact">
+  <span class="eyebrow">Productos y servicios</span>
+  <h1>Productos y servicios</h1>
+  <p class="hero-lead">Servicios digitales para diagnosticar, orientar y conectar talento joven con oportunidades reales.</p>
+  <p>
+    SkillsMatch Medellín se estructura como una plataforma digital con servicios para jóvenes, empresas e instituciones. Su
+    objetivo es transformar la búsqueda de empleo en un proceso guiado por habilidades, datos y recomendaciones personalizadas.
+  </p>
+</section>
+
+<section class="section">
+  <div class="section-image">
+    <img
+      src="assets/images/productos-servicios-plataforma.png"
+      alt="Personas revisando una plataforma digital de diagnóstico de habilidades, formación y oportunidades laborales."
+    />
+    <div class="image-caption">
+      Los servicios de SkillsMatch Medellín combinan perfilamiento, diagnóstico, rutas de formación y conexión con oportunidades.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="service-grid">
+    <article class="service-card" *ngFor="let product of products; let index = index">
+      <span class="badge">Servicio {{ index + 1 }}</span>
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <div class="value-note">
+        <strong>Valor entregado</strong>
+        <p>{{ product.value }}</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Niveles de servicio</span>
+    <h2>Planes según usuario y organización</h2>
+  </div>
+  <div class="plan-grid">
+    <article class="plan-card" *ngFor="let plan of plans">
+      <span class="badge">{{ plan.audience }}</span>
+      <h3>{{ plan.name }}</h3>
+      <ul class="check-list compact">
+        <li *ngFor="let item of plan.items">{{ item }}</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Modelo de servicio</span>
+    <h2>Freemium para jóvenes, suscripción para organizaciones</h2>
+  </div>
+  <div class="narrative-card">
+    <p>
+      SkillsMatch Medellín combina un modelo freemium para jóvenes con servicios de suscripción para empresas e instituciones.
+      Esto permite mantener acceso básico gratuito para los usuarios que más necesitan orientación, mientras se generan ingresos
+      a partir de servicios de mayor valor para organizaciones que requieren talento, datos y analítica.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="highlight-banner">
+    <div class="highlight-banner-top">
+      <span class="eyebrow light">Cierre</span>
+      <span class="highlight-banner-mark">✓</span>
+    </div>
+    <div class="highlight-banner-content">
+      <h2>
+        La plataforma no vende solamente acceso a vacantes; ofrece orientación, diagnóstico, formación recomendada y conexión
+        inteligente con oportunidades.
+      </h2>
+    </div>
+  </div>
+</section>

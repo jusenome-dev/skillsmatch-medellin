@@ -1,0 +1,246 @@
+<section class="page-hero compact">
+  <span class="eyebrow">Prototipo</span>
+  <h1>Prototipo</h1>
+  <p class="hero-lead">Simulación funcional de SkillsMatch Medellín</p>
+  <p>
+    El prototipo de SkillsMatch Medellín representa una versión inicial de la plataforma. Su objetivo es mostrar cómo un joven
+    puede registrar su perfil, visualizar sus habilidades, identificar brechas, recibir recomendaciones de formación y encontrar
+    oportunidades laborales más compatibles con su perfil.
+  </p>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Definición</span>
+    <h2>¿Qué es el prototipo?</h2>
+  </div>
+  <div class="narrative-card">
+    <p>
+      El prototipo no utiliza una base de datos real ni procesa información sensible. Es una simulación académica diseñada para
+      evidenciar la experiencia principal del usuario y validar la lógica de la solución tecnológica: pasar de una búsqueda
+      laboral desordenada a una ruta guiada por habilidades, brechas y oportunidades.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-image">
+    <img
+      src="assets/images/prototipo-dashboard-skillsmatch.png"
+      alt="Demostración de un prototipo digital de SkillsMatch Medellín con dashboard de habilidades y oportunidades."
+    />
+    <div class="image-caption">
+      El prototipo permite visualizar cómo un usuario identifica brechas, rutas de formación y vacantes compatibles.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Flujo funcional</span>
+    <h2>Del registro al dashboard de progreso</h2>
+  </div>
+  <div class="prototype-flow">
+    <article class="flow-step" *ngFor="let step of steps; let index = index">
+      <span>{{ index + 1 }}</span>
+      <h3>{{ step.title }}</h3>
+      <p>{{ step.text }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="dashboard-frame">
+    <div class="dashboard-header">
+      <div>
+        <span class="eyebrow light">Dashboard simulado</span>
+        <h2>{{ user.name }}</h2>
+        <p>{{ user.goal }} · {{ user.status }}</p>
+      </div>
+      <span class="avatar">CR</span>
+    </div>
+
+    <div class="profile-matrix">
+      <div><strong>Edad</strong><span>{{ user.age }}</span></div>
+      <div><strong>Ubicación</strong><span>{{ user.location }}</span></div>
+      <div><strong>Meta laboral</strong><span>{{ user.goal }}</span></div>
+      <div><strong>Nivel actual</strong><span>{{ user.level }}</span></div>
+      <div><strong>Estado</strong><span>{{ user.status }}</span></div>
+    </div>
+
+    <div class="dashboard-stats prototype-stats">
+      <div *ngFor="let metric of metrics">
+        <strong>{{ metric.value }}</strong>
+        <small>{{ metric.label }}</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dashboard-grid">
+  <article class="prototype-card">
+    <div class="card-title-row">
+      <h3>Habilidades actuales</h3>
+      <span class="badge">Perfil</span>
+    </div>
+    <div class="skills-list">
+      <span class="skill-chip selected" *ngFor="let skill of skills">{{ skill }}</span>
+    </div>
+  </article>
+
+  <article class="prototype-card">
+    <div class="card-title-row">
+      <h3>Brechas identificadas</h3>
+      <span class="badge">Prioridad</span>
+    </div>
+    <div class="gap-list">
+      <div class="gap-item" *ngFor="let gap of gaps">
+        <div>
+          <strong>{{ gap.name }}</strong>
+          <small>Actual {{ gap.current }}% · Recomendado {{ gap.recommended }}%</small>
+        </div>
+        <div class="progress-comparison">
+          <div class="progress-line"><span [style.width.%]="gap.current"></span></div>
+          <i [style.left.%]="gap.recommended"></i>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Matching</span>
+    <h2>Vacantes compatibles</h2>
+  </div>
+  <div class="vacancy-grid">
+    <article class="vacancy-card detailed" *ngFor="let vacancy of vacancies">
+      <div class="vacancy-top">
+        <div>
+          <h3>{{ vacancy.role }}</h3>
+          <p>{{ vacancy.company }}</p>
+        </div>
+        <strong>{{ vacancy.match }}%</strong>
+      </div>
+      <h4>Habilidades coincidentes</h4>
+      <span class="mini-tag" *ngFor="let match of vacancy.matches">{{ match }}</span>
+      <h4>Brechas</h4>
+      <span class="mini-tag muted" *ngFor="let gap of vacancy.gaps">{{ gap }}</span>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Formación</span>
+    <h2>Rutas de formación recomendadas</h2>
+  </div>
+  <div class="route-grid">
+    <article class="route-card" *ngFor="let route of routes">
+      <span class="badge">{{ route.priority }}</span>
+      <h3>{{ route.name }}</h3>
+      <p>{{ route.objective }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Vista empresa</span>
+    <h2>Vista para empresas</h2>
+    <p>
+      Las empresas pueden publicar una vacante, definir habilidades requeridas y visualizar candidatos ordenados por nivel de
+      compatibilidad. Esto reduce el tiempo de búsqueda y mejora la calidad de la preselección.
+    </p>
+  </div>
+
+  <div class="company-view">
+    <article class="prototype-card">
+      <span class="badge">Vacante empresarial</span>
+      <h3>Desarrollador Frontend Junior</h3>
+      <div class="skills-list">
+        <span class="skill-chip selected" *ngFor="let skill of companyVacancySkills">{{ skill }}</span>
+      </div>
+    </article>
+
+    <article class="prototype-card">
+      <span class="badge">Ranking simulado</span>
+      <div class="ranking-row" *ngFor="let candidate of candidateRanking; let index = index">
+        <span>{{ index + 1 }}</span>
+        <strong>{{ candidate.name }}</strong>
+        <em>{{ candidate.match }}% de compatibilidad</em>
+      </div>
+    </article>
+
+    <article class="prototype-card">
+      <span class="badge">Camila Restrepo</span>
+      <div class="company-lists">
+        <div>
+          <h4>Fortalezas</h4>
+          <ul class="check-list compact">
+            <li *ngFor="let strength of camilaStrengths">{{ strength }}</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Brechas</h4>
+          <ul class="check-list compact">
+            <li *ngFor="let gap of camilaCompanyGaps">{{ gap }}</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Interfaz</span>
+    <h2>Aspecto visual del prototipo</h2>
+    <p>
+      El prototipo se plantea con una interfaz limpia, tipo dashboard, orientada a la toma de decisiones. El usuario debe
+      entender rápidamente su perfil, sus brechas y las oportunidades más compatibles. La experiencia visual prioriza claridad,
+      confianza y facilidad de uso.
+    </p>
+  </div>
+  <ul class="check-list">
+    <li *ngFor="let element of visualElements">{{ element }}</li>
+  </ul>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Video con IA</span>
+    <h2>Video explicativo generado con IA</h2>
+    <p>
+      Esta sección está reservada para integrar un video corto generado con IA, donde se evidencie el problema de empleabilidad
+      juvenil y la solución propuesta por SkillsMatch Medellín.
+    </p>
+  </div>
+  <div class="video-grid">
+    <div class="video-placeholder">
+      <span>▶</span>
+      <p>Espacio reservado para video IA: problema, solución y experiencia de usuario</p>
+    </div>
+    <div class="prompt-card">
+      <h3>Guion del video</h3>
+      <p>{{ videoScript }}</p>
+      <h3>Prompt</h3>
+      <p>{{ videoPrompt }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="highlight-banner">
+    <div class="highlight-banner-top">
+      <span class="eyebrow light">Validación</span>
+      <span class="highlight-banner-mark">MVP</span>
+    </div>
+    <div class="highlight-banner-content">
+      <h2>
+        Este prototipo permite validar la experiencia central de SkillsMatch Medellín antes de desarrollar una versión completa
+        conectada con datos reales.
+      </h2>
+    </div>
+  </div>
+</section>

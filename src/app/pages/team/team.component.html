@@ -1,0 +1,69 @@
+<section class="page-hero compact">
+  <span class="eyebrow">Equipo</span>
+  <h1>Equipo de trabajo</h1>
+  <p class="hero-lead">Perfil del integrante que lidera la propuesta SkillsMatch Medellín.</p>
+  <p>
+    SkillsMatch Medellín es desarrollado como una propuesta académica de emprendimiento de base tecnológica. El proyecto
+    integra análisis del problema, investigación documental, diseño de propuesta de valor, modelo de negocio, prototipo
+    funcional simulado y visión de impacto.
+  </p>
+</section>
+
+<section class="section">
+  <div class="section-image">
+    <img
+      src="assets/images/equipo-trabajo-skillsmatch.png"
+      alt="Equipo de trabajo colaborando en el diseño de una solución tecnológica de empleabilidad."
+    />
+    <div class="image-caption">
+      El proyecto integra investigación, diseño de solución, modelo de negocio y desarrollo de prototipo.
+    </div>
+  </div>
+</section>
+
+<section class="section team-profile">
+  <div class="image-placeholder portrait">
+    <span>Foto profesional del integrante</span>
+    <small>Preparado para assets/images/perfil-sebastian.jpg</small>
+  </div>
+
+  <article class="profile-card">
+    <span class="badge">Integrante</span>
+    <h2>Juan Sebastián Noriega Mendoza</h2>
+    <h3>Estudiante de Ingeniería de Sistemas</h3>
+    <p>
+      Estudiante de décimo semestre de Ingeniería de Sistemas, con experiencia práctica en desarrollo de software, bases de
+      datos, aplicaciones web y soluciones tecnológicas aplicadas a problemas reales. Su interés está orientado a construir
+      productos digitales útiles, sostenibles y conectados con necesidades concretas del entorno.
+    </p>
+    <h3>Responsabilidades en el proyecto</h3>
+    <ul class="check-list compact">
+      <li *ngFor="let item of responsibilities">{{ item }}</li>
+    </ul>
+  </article>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Competencias</span>
+    <h2>Competencias aplicadas</h2>
+  </div>
+  <div class="card-grid two">
+    <article class="info-card" *ngFor="let competency of competencies">
+      <span class="badge">Skill</span>
+      <h3>{{ competency.title }}</h3>
+      <p>{{ competency.text }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Enlaces</span>
+    <h2>Enlaces profesionales</h2>
+    <p>Reemplazar estos enlaces por los enlaces reales antes de publicar la página.</p>
+  </div>
+  <div class="link-panel">
+    <a class="btn ghost" *ngFor="let link of links" [href]="link.url">{{ link.label }}</a>
+  </div>
+</section>

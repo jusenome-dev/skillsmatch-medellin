@@ -1,0 +1,81 @@
+<section class="page-hero compact">
+  <span class="eyebrow">Modelo de negocio</span>
+  <h1>Modelo de negocio</h1>
+  <p class="hero-lead">Business Model Canvas de SkillsMatch Medellín</p>
+  <p>
+    El modelo de negocio de SkillsMatch Medellín busca equilibrar impacto social y sostenibilidad financiera. La plataforma
+    ofrece valor gratuito o de bajo costo para jóvenes, mientras genera ingresos a través de servicios para empresas,
+    instituciones educativas, analítica laboral y alianzas estratégicas.
+  </p>
+</section>
+
+<section class="section">
+  <div class="section-image">
+    <img
+      src="assets/images/modelo-negocio-canvas.png"
+      alt="Equipo trabajando en un modelo de negocio para una solución tecnológica de empleabilidad."
+    />
+    <div class="image-caption">
+      El modelo de negocio busca equilibrar impacto social y sostenibilidad financiera.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Canvas</span>
+    <h2>Business Model Canvas</h2>
+  </div>
+  <div class="business-canvas-grid">
+    <article class="canvas-card" *ngFor="let block of canvasBlocks; let index = index">
+      <span class="badge">Bloque {{ index + 1 }}</span>
+      <h3>{{ block.title }}</h3>
+      <ul class="check-list compact">
+        <li *ngFor="let item of block.items">{{ item }}</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Monetización</span>
+    <h2>Formas de monetización</h2>
+  </div>
+  <div class="card-grid two">
+    <article class="info-card" *ngFor="let card of monetizationCards">
+      <span class="badge">{{ card.badge }}</span>
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.text }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Sostenibilidad</span>
+    <h2>Sostenibilidad del modelo</h2>
+  </div>
+  <div class="narrative-card">
+    <p>
+      El modelo busca que los jóvenes puedan acceder a una versión básica sin barreras económicas, mientras los ingresos
+      provienen principalmente de empresas, instituciones y aliados que necesitan información, talento y herramientas de
+      decisión. De esta manera, SkillsMatch Medellín combina impacto social con sostenibilidad financiera.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="highlight-banner">
+    <div class="highlight-banner-top">
+      <span class="eyebrow light">Cierre</span>
+      <span class="highlight-banner-mark">✓</span>
+    </div>
+    <div class="highlight-banner-content">
+      <h2>
+        SkillsMatch Medellín no solo conecta personas con empleos: convierte información dispersa en decisiones útiles para
+        jóvenes, empresas e instituciones.
+      </h2>
+    </div>
+  </div>
+</section>
