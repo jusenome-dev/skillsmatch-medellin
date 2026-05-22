@@ -26,8 +26,8 @@
     <span class="eyebrow">Canvas</span>
     <h2>Business Model Canvas</h2>
   </div>
-  <div class="business-canvas-grid">
-    <article class="canvas-card" *ngFor="let block of canvasBlocks; let index = index">
+  <div class="canvas-grid business-canvas-grid">
+    <article class="canvas-block canvas-card" *ngFor="let block of canvasBlocks; let index = index">
       <span class="badge">Bloque {{ index + 1 }}</span>
       <h3>{{ block.title }}</h3>
       <ul class="check-list compact">
@@ -40,9 +40,14 @@
 <section class="section">
   <div class="section-heading">
     <span class="eyebrow">Monetización</span>
-    <h2>Formas de monetización</h2>
+    <h2>¿Cómo genera dinero SkillsMatch Medellín?</h2>
+    <p>
+      El usuario principal es el joven que necesita orientación laboral. Sin embargo, los clientes que sostienen financieramente
+      el modelo son principalmente empresas, instituciones educativas y entidades públicas interesadas en talento, datos y
+      empleabilidad.
+    </p>
   </div>
-  <div class="card-grid two">
+  <div class="card-grid">
     <article class="info-card" *ngFor="let card of monetizationCards">
       <span class="badge">{{ card.badge }}</span>
       <h3>{{ card.title }}</h3>

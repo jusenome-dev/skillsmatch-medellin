@@ -11,6 +11,34 @@ interface DetailCard {
   styleUrls: ['./company.component.scss']
 })
 export class CompanyComponent {
+  cityProblemStats: DetailCard[] = [
+    {
+      title: 'Competencias básicas',
+      text: 'Uno de cada tres estudiantes se gradúa sin alcanzar competencias mínimas en lectura. Fuente: Medellín Cómo Vamos.'
+    },
+    {
+      title: 'Vacantes sin talento idóneo',
+      text:
+        'En 2024, de cerca de 2 millones de puestos ofertados en el Área Metropolitana, solo el 40% encontró candidatos idóneos. Fuente: Medellín Cómo Vamos.'
+    },
+    {
+      title: 'Pertinencia formativa',
+      text: 'Existen retos de pertinencia y permanencia en la formación técnica y tecnológica.'
+    },
+    {
+      title: 'Habilidades demandadas',
+      text: 'Las empresas reportan dificultades para encontrar talento con habilidades digitales, técnicas y socioemocionales.'
+    }
+  ];
+
+  reviewedSolutions: DetailCard[] = [
+    { title: 'OIT / AUDA-NEPAD', text: 'Anticipación y matching de habilidades.' },
+    { title: 'Enabel Palestina', text: 'Plataforma de job matching con inteligencia artificial.' },
+    { title: 'PYEI Sudáfrica', text: 'Formación orientada por demanda.' },
+    { title: 'Estudio de Malasia', text: 'Errores en plataformas de recomendación laboral.' },
+    { title: 'YIEDIE Ghana', text: 'Formación, mentoría y conexión laboral para jóvenes.' }
+  ];
+
   pillars: DetailCard[] = [
     {
       title: 'Misión',

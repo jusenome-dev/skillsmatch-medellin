@@ -8,6 +8,50 @@
   </p>
 </section>
 
+<section class="section diagram-section">
+  <div class="section-heading">
+    <span class="eyebrow">Articulación</span>
+    <h2>Articulación entre cliente, propuesta de valor y servicios</h2>
+  </div>
+  <div class="card-grid two">
+    <article class="info-card featured">
+      <span class="badge">Buyer persona</span>
+      <h3>Camila Restrepo</h3>
+      <p>
+        Camila Restrepo representa a jóvenes egresados que buscan su primer empleo formal, pero no saben qué habilidades tienen,
+        cuáles les faltan y a qué vacantes deberían aplicar.
+      </p>
+      <a class="btn ghost" routerLink="/cliente-journey-map">Ver cliente</a>
+    </article>
+    <article class="info-card featured">
+      <span class="badge">Journey Map</span>
+      <h3>Recorrido del usuario</h3>
+      <p>
+        El recorrido de Camila permite identificar momentos de frustración, incertidumbre y oportunidad al buscar empleo.
+      </p>
+      <a class="btn ghost" routerLink="/cliente-journey-map" fragment="journey-map">Ver Journey Map</a>
+    </article>
+    <article class="info-card featured">
+      <span class="badge">Propuesta de valor</span>
+      <h3>Encaje necesidad-solución</h3>
+      <p>
+        SkillsMatch Medellín conecta los dolores del usuario con servicios de diagnóstico, rutas de formación y matching con
+        oportunidades.
+      </p>
+      <a class="btn ghost" routerLink="/propuesta-de-valor">Ver propuesta de valor</a>
+    </article>
+    <article class="info-card featured">
+      <span class="badge">Servicios</span>
+      <h3>Oferta digital</h3>
+      <p>
+        La empresa ofrece perfilamiento, diagnóstico de brechas, matching laboral, rutas de formación, panel para empresas y
+        analítica institucional.
+      </p>
+      <a class="btn ghost" href="#servicios">Ver servicios</a>
+    </article>
+  </div>
+</section>
+
 <section class="section">
   <div class="section-image">
     <img
@@ -20,7 +64,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="servicios">
   <div class="service-grid">
     <article class="service-card" *ngFor="let product of products; let index = index">
       <span class="badge">Servicio {{ index + 1 }}</span>

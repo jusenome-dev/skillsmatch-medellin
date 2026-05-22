@@ -6,10 +6,6 @@
     SkillsMatch Medellín parte de una pregunta central: ¿cómo ayudar a jóvenes, estudiantes y egresados a entender qué
     habilidades tienen, qué habilidades les faltan y qué oportunidades laborales se ajustan mejor a su perfil?
   </p>
-  <p>
-    Para responder a esta pregunta, la propuesta de valor conecta los dolores del usuario con servicios tecnológicos concretos
-    que orientan, diagnostican y acompañan su proceso de empleabilidad.
-  </p>
 </section>
 
 <section class="section">
@@ -28,6 +24,59 @@
   </div>
 </section>
 
+<section class="section canvas-section">
+  <div class="canvas-header">
+    <span class="eyebrow">Lienzo</span>
+    <h2>Lienzo de Propuesta de Valor</h2>
+    <p>Encaje entre el perfil de Camila y la solución ofrecida por SkillsMatch Medellín.</p>
+  </div>
+
+  <div class="value-proposition-canvas">
+    <article class="value-map-shape">
+      <div class="shape-title">
+        <span>Mapa de valor</span>
+        <h3>SkillsMatch Medellín</h3>
+      </div>
+      <div class="canvas-mini-block" *ngFor="let block of valueCanvasBlocks">
+        <h4>{{ block.title }}</h4>
+        <ul class="check-list compact">
+          <li *ngFor="let item of block.items">{{ item }}</li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="fit-arrow">
+      <span>Encaje</span>
+    </div>
+
+    <article class="customer-profile-shape">
+      <div class="shape-title">
+        <span>Perfil del cliente</span>
+        <h3>Camila Restrepo</h3>
+      </div>
+      <div class="canvas-mini-block" *ngFor="let block of customerCanvasBlocks">
+        <h4>{{ block.title }}</h4>
+        <ul class="check-list compact">
+          <li *ngFor="let item of block.items">{{ item }}</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section split-section">
+  <div class="section-heading">
+    <span class="eyebrow">Encaje</span>
+    <h2>Encaje principal</h2>
+  </div>
+  <div class="narrative-card">
+    <p>
+      El encaje se produce porque SkillsMatch Medellín no solo muestra vacantes, sino que traduce el perfil de Camila en
+      brechas, rutas de formación y oportunidades compatibles.
+    </p>
+  </div>
+</section>
+
 <section class="section">
   <div class="section-image">
     <img
@@ -37,57 +86,6 @@
     <div class="image-caption">
       La propuesta de valor conecta las necesidades del usuario con servicios concretos de diagnóstico, formación y matching.
     </div>
-  </div>
-</section>
-
-<section class="section value-canvas">
-  <article class="value-column">
-    <div class="section-heading">
-      <span class="eyebrow">Columna 1</span>
-      <h2>Perfil del cliente: Camila Restrepo</h2>
-    </div>
-    <div class="value-block" *ngFor="let block of customerBlocks">
-      <h3>{{ block.title }}</h3>
-      <ul class="check-list compact">
-        <li *ngFor="let item of block.items">{{ item }}</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="value-column accent">
-    <div class="section-heading">
-      <span class="eyebrow">Columna 2</span>
-      <h2>Mapa de valor de SkillsMatch Medellín</h2>
-    </div>
-    <div class="value-block" *ngFor="let block of valueBlocks">
-      <h3>{{ block.title }}</h3>
-      <ul class="check-list compact">
-        <li *ngFor="let item of block.items">{{ item }}</li>
-      </ul>
-    </div>
-  </article>
-</section>
-
-<section class="section split-section">
-  <div class="section-heading">
-    <span class="eyebrow">Encaje</span>
-    <h2>Encaje entre cliente y solución</h2>
-    <p>
-      El encaje se da porque SkillsMatch Medellín no se limita a mostrar vacantes. La plataforma interpreta el perfil del
-      usuario, identifica brechas, recomienda rutas de aprendizaje y muestra oportunidades con mayor nivel de compatibilidad.
-    </p>
-    <p>
-      De esta manera, el valor no está solo en el acceso a información, sino en convertir esa información en una ruta clara y
-      accionable para mejorar la empleabilidad.
-    </p>
-  </div>
-  <div class="fit-grid">
-    <article class="fit-card" *ngFor="let card of fitCards">
-      <span class="badge">Dolor</span>
-      <h3>“{{ card.pain }}”</h3>
-      <strong>Respuesta</strong>
-      <p>{{ card.response }}.</p>
-    </article>
   </div>
 </section>
 

@@ -16,6 +16,7 @@ import { OpportunityComponent } from './pages/opportunity/opportunity.component'
 import { ProductsServicesComponent } from './pages/products-services/products-services.component';
 import { PrototypeComponent } from './pages/prototype/prototype.component';
 import { TeamComponent } from './pages/team/team.component';
+import { TraceabilityComponent } from './pages/traceability/traceability.component';
 import { ValuePropositionComponent } from './pages/value-proposition/value-proposition.component';
 
 @NgModule({
@@ -34,6 +35,7 @@ import { ValuePropositionComponent } from './pages/value-proposition/value-propo
     BusinessModelComponent,
     PrototypeComponent,
     ImpactComponent,
+    TraceabilityComponent,
     ContactComponent
   ],
   imports: [

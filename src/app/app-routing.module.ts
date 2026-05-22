@@ -11,6 +11,7 @@ import { OpportunityComponent } from './pages/opportunity/opportunity.component'
 import { ProductsServicesComponent } from './pages/products-services/products-services.component';
 import { PrototypeComponent } from './pages/prototype/prototype.component';
 import { TeamComponent } from './pages/team/team.component';
+import { TraceabilityComponent } from './pages/traceability/traceability.component';
 import { ValuePropositionComponent } from './pages/value-proposition/value-proposition.component';
 
 const routes: Routes = [
@@ -23,8 +24,9 @@ const routes: Routes = [
   { path: 'propuesta-de-valor', component: ValuePropositionComponent },
   { path: 'productos-servicios', component: ProductsServicesComponent },
   { path: 'modelo-de-negocio', component: BusinessModelComponent },
-  { path: 'prototipo', component: PrototypeComponent },
   { path: 'impacto', component: ImpactComponent },
+  { path: 'trazabilidad', component: TraceabilityComponent },
+  { path: 'prototipo', component: PrototypeComponent },
   { path: 'contacto', component: ContactComponent },
   { path: '**', redirectTo: '' }
 ];

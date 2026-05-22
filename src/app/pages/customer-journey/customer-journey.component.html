@@ -7,105 +7,141 @@
   </p>
 </section>
 
-<section class="section">
-  <div class="section-image">
-    <img
-      src="assets/images/cliente-camila-restrepo.png"
-      alt="Representación visual de Camila Restrepo, joven egresada que busca su primer empleo formal."
-    />
-    <div class="image-caption">
-      Camila representa a jóvenes egresados que necesitan claridad sobre sus habilidades y oportunidades.
+<section class="section canvas-section">
+  <div class="canvas-header">
+    <span class="eyebrow">Buyer Persona</span>
+    <h2>Buyer Persona</h2>
+    <p>Representación del usuario principal de SkillsMatch Medellín.</p>
+  </div>
+
+  <div class="buyer-persona-canvas">
+    <article class="persona-profile-card">
+      <div class="persona-photo">
+        <img
+          src="assets/images/cliente-camila-restrepo.png"
+          alt="Imagen de perfil de Camila Restrepo, buyer persona de SkillsMatch Medellín."
+        />
+      </div>
+      <div class="persona-profile-summary">
+        <span class="badge">Usuario principal</span>
+        <h3>Camila Restrepo</h3>
+        <div class="persona-meta-grid">
+          <span><strong>Edad</strong>23 años</span>
+          <span><strong>Ubicación</strong>Robledo, Medellín</span>
+          <span><strong>Perfil</strong>Tecnóloga recién egresada en desarrollo de software</span>
+          <span><strong>Situación</strong>Busca su primer empleo formal en tecnología</span>
+        </div>
+        <blockquote>
+          “Estudié, pero no tengo claro qué habilidades me faltan para conseguir un buen empleo.”
+        </blockquote>
+      </div>
+    </article>
+
+    <div class="persona-grid">
+      <article class="persona-block" *ngFor="let block of personaCanvasBlocks">
+        <span class="persona-block-icon">{{ block.icon }}</span>
+        <h3>{{ block.title }}</h3>
+        <ng-container *ngIf="block.items">
+          <ul class="check-list compact">
+            <li *ngFor="let item of block.items">{{ item }}</li>
+          </ul>
+        </ng-container>
+        <ng-container *ngIf="block.groups">
+          <div class="persona-mini-group" *ngFor="let group of block.groups">
+            <strong>{{ group.label }}</strong>
+            <ul class="check-list compact">
+              <li *ngFor="let item of group.items">{{ item }}</li>
+            </ul>
+          </div>
+        </ng-container>
+      </article>
+
+      <article class="persona-block persona-need">
+        <span class="persona-block-icon">08</span>
+        <h3>Necesidad principal</h3>
+        <p>
+          “Camila no necesita solo más vacantes; necesita entender su perfil, conocer sus brechas y recibir una ruta clara para
+          mejorar sus oportunidades laborales.”
+        </p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="persona-section">
-  <article class="persona-card">
-    <span class="avatar">CR</span>
-    <div>
-      <span class="eyebrow">Persona usuaria</span>
-      <h2>{{ persona.name }}</h2>
-      <p>{{ persona.description }}</p>
-    </div>
-  </article>
-
-  <aside class="persona-facts">
-    <div><strong>Edad</strong><span>{{ persona.age }}</span></div>
-    <div><strong>Ubicación</strong><span>{{ persona.location }}</span></div>
-    <div><strong>Perfil</strong><span>{{ persona.profile }}</span></div>
-    <div><strong>Situación actual</strong><span>{{ persona.currentSituation }}</span></div>
-    <div><strong>Dispositivos</strong><span>{{ persona.devices }}</span></div>
-    <div><strong>Canales digitales</strong><span>{{ persona.channels }}</span></div>
-  </aside>
-</section>
-
-<section class="section">
-  <div class="persona-grid">
-    <article class="info-card">
-      <span class="badge">Necesidades</span>
-      <ul class="check-list compact">
-        <li *ngFor="let item of needs">{{ item }}</li>
-      </ul>
-    </article>
-    <article class="info-card">
-      <span class="badge">Frustraciones</span>
-      <ul class="check-list compact">
-        <li *ngFor="let item of frustrations">{{ item }}</li>
-      </ul>
-    </article>
-    <article class="info-card">
-      <span class="badge">Motivaciones</span>
-      <ul class="check-list compact">
-        <li *ngFor="let item of motivations">{{ item }}</li>
-      </ul>
-    </article>
-    <article class="info-card">
-      <span class="badge">Objetivos</span>
-      <ul class="check-list compact">
-        <li *ngFor="let item of goals">{{ item }}</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-image">
-    <img
-      src="assets/images/journey-map-camila.png"
-      alt="Sesión de orientación donde se construye el recorrido profesional de una joven usuaria."
-    />
-    <div class="image-caption">
-      El journey map permite entender el recorrido emocional y práctico del usuario antes de diseñar la solución.
-    </div>
-  </div>
-
+<section class="section diagram-section">
   <div class="section-heading">
-    <span class="eyebrow">Journey Map</span>
-    <h2>Recorrido de Camila hacia su primer empleo formal</h2>
+    <span class="eyebrow">Mapa de empatía</span>
+    <h2>Mapa de empatía de Camila Restrepo</h2>
   </div>
-  <div class="journey-table">
-    <article class="journey-row" *ngFor="let step of steps; let index = index">
-      <div class="journey-stage">
-        <span>{{ index + 1 }}</span>
-        <h3>{{ step.stage }}</h3>
-      </div>
-      <div>
-        <strong>Qué hace</strong>
-        <p>{{ step.action }}</p>
-      </div>
-      <div>
-        <strong>Qué siente</strong>
-        <p>{{ step.feeling }}</p>
-      </div>
-      <div>
-        <strong>Dolor</strong>
-        <p>{{ step.pain }}</p>
-      </div>
-      <div>
-        <strong>Oportunidad para SkillsMatch</strong>
-        <p>{{ step.opportunity }}</p>
-      </div>
+  <div class="empathy-map">
+    <article class="empathy-center">
+      <span class="avatar">CR</span>
+      <h3>Camila Restrepo</h3>
+      <p>Joven egresada que busca su primer empleo formal y necesita orientación por habilidades.</p>
     </article>
+    <article class="empathy-card" *ngFor="let block of empathyBlocks">
+      <h3>{{ block.title }}</h3>
+      <ul class="check-list compact">
+        <li *ngFor="let item of block.items">{{ item }}</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section canvas-section" id="journey-map">
+  <div class="canvas-header">
+    <span class="eyebrow">Journey Map</span>
+    <h2>Journey Map de Camila Restrepo</h2>
+    <p>Recorrido emocional y práctico al buscar su primer empleo formal.</p>
+  </div>
+
+  <div class="journey-scroll">
+    <div class="journey-map-template">
+      <div class="journey-row phase-row">
+        <div class="journey-row-label">Etapas</div>
+        <div class="journey-cell stage-cell" *ngFor="let step of journeyTemplate" [ngClass]="'phase-' + step.phaseClass">
+          <span>{{ step.phase }}</span>
+          <strong>{{ step.stage }}</strong>
+        </div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-row-label">Hacer</div>
+        <div class="journey-cell" *ngFor="let step of journeyTemplate">{{ step.doing }}</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-row-label">Pensar y decir</div>
+        <div class="journey-cell quote-cell" *ngFor="let step of journeyTemplate">{{ step.thinking }}</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-row-label">Interactúa con</div>
+        <div class="journey-cell" *ngFor="let step of journeyTemplate">{{ step.touchpoints }}</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-row-label">Sentimiento</div>
+        <div class="journey-cell feeling-cell" *ngFor="let step of journeyTemplate">{{ step.feeling }}</div>
+      </div>
+
+      <div class="journey-row emotion-row">
+        <div class="journey-row-label">Mapa emocional</div>
+        <div class="journey-cell emotion-cell" *ngFor="let step of journeyTemplate; let index = index">
+          <div class="emotion-track">
+            <span
+              class="emotion-point"
+              [class.low]="step.emotion <= 30"
+              [class.high]="step.emotion >= 80"
+              [style.bottom.%]="step.emotion"
+            ></span>
+          </div>
+          <strong>{{ step.emotion }}%</strong>
+          <span class="pain-label" *ngIf="step.emotion <= 30">Pain</span>
+          <span class="gain-label" *ngIf="step.emotion >= 80">Gain</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

@@ -12,13 +12,14 @@ interface DetailCard {
 })
 export class TeamComponent {
   responsibilities: string[] = [
-    'Investigación del problema y análisis de oportunidad.',
-    'Revisión de soluciones existentes y estado del arte.',
-    'Diseño de la propuesta de valor.',
-    'Construcción del modelo de negocio.',
-    'Diseño del journey map y perfil del usuario.',
-    'Desarrollo del prototipo web.',
-    'Análisis del impacto esperado.'
+    'Investigación del problema de ciudad.',
+    'Análisis de la oportunidad.',
+    'Revisión de soluciones existentes.',
+    'Construcción del buyer persona.',
+    'Diseño del journey map.',
+    'Construcción de la propuesta de valor.',
+    'Diseño del modelo de negocio.',
+    'Desarrollo del sitio web y prototipo conceptual.'
   ];
 
   competencies: DetailCard[] = [
@@ -41,9 +42,8 @@ export class TeamComponent {
   ];
 
   links = [
-    { label: 'LinkedIn', url: '#' },
-    { label: 'Hoja de vida', url: '#' },
-    { label: 'Correo electrónico', url: 'mailto:correo@ejemplo.com' },
-    { label: 'GitHub o portafolio', url: '#' }
+    { label: 'LinkedIn profesional', url: '#' }
   ];
+
+  photoMissing = false;
 }

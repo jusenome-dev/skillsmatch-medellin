@@ -29,6 +29,7 @@ export interface JourneyMapStep {
   feeling: string;
   pain: string;
   opportunity: string;
+  emotionLevel?: number;
 }
 
 export interface ValueBlock {
@@ -66,10 +67,11 @@ export const navItems: NavItem[] = [
   { label: 'Soluciones', path: '/soluciones-existentes' },
   { label: 'Cliente', path: '/cliente-journey-map' },
   { label: 'Valor', path: '/propuesta-de-valor' },
-  { label: 'Productos', path: '/productos-servicios' },
-  { label: 'Modelo', path: '/modelo-de-negocio' },
-  { label: 'Prototipo', path: '/prototipo' },
+  { label: 'Servicios', path: '/productos-servicios' },
+  { label: 'Canvas', path: '/modelo-de-negocio' },
   { label: 'Impacto', path: '/impacto' },
+  { label: 'Trazabilidad', path: '/trazabilidad' },
+  { label: 'Prototipo', path: '/prototipo' },
   { label: 'Contacto', path: '/contacto' }
 ];
 
@@ -306,58 +308,66 @@ export const journeySteps: JourneyMapStep[] = [
   {
     stage: 'Reconoce la necesidad',
     action: 'Termina sus estudios y decide buscar empleo.',
-    feeling: 'Ilusión, pero también incertidumbre.',
+    feeling: 'Incertidumbre',
     pain: 'No sabe por dónde empezar.',
-    opportunity: 'Diagnóstico inicial de perfil y habilidades.'
+    opportunity: 'Diagnóstico inicial de perfil y habilidades.',
+    emotionLevel: 24
   },
   {
     stage: 'Busca vacantes',
     action: 'Revisa LinkedIn, portales de empleo y grupos de WhatsApp.',
-    feeling: 'Confusión y saturación.',
-    pain: 'Demasiadas ofertas, muchas poco claras o poco compatibles.',
-    opportunity: 'Filtro de vacantes según habilidades reales.'
+    feeling: 'Confusión',
+    pain: 'Ofertas dispersas.',
+    opportunity: 'Filtros por habilidades.',
+    emotionLevel: 22
   },
   {
     stage: 'Aplica sin claridad',
     action: 'Envía hojas de vida a varias ofertas.',
-    feeling: 'Ansiedad y expectativa.',
-    pain: 'No sabe si realmente cumple con los requisitos.',
-    opportunity: 'Mostrar porcentaje de compatibilidad con cada vacante.'
+    feeling: 'Ansiedad',
+    pain: 'No sabe si cumple requisitos.',
+    opportunity: 'Porcentaje de compatibilidad.',
+    emotionLevel: 20
   },
   {
     stage: 'Recibe rechazo o silencio',
     action: 'Espera respuestas que no llegan.',
-    feeling: 'Frustración y desmotivación.',
+    feeling: 'Frustración',
     pain: 'No recibe retroalimentación.',
-    opportunity: 'Explicar brechas de habilidades y recomendaciones de mejora.'
+    opportunity: 'Explicación de brechas.',
+    emotionLevel: 12
   },
   {
     stage: 'Busca formación',
     action: 'Explora cursos gratuitos y pagos.',
-    feeling: 'Duda y desorden.',
-    pain: 'No sabe qué curso le ayuda realmente a conseguir empleo.',
-    opportunity: 'Rutas de formación según meta laboral.'
+    feeling: 'Duda',
+    pain: 'No sabe qué curso priorizar.',
+    opportunity: 'Rutas recomendadas.',
+    emotionLevel: 50
   },
   {
     stage: 'Usa SkillsMatch',
     action: 'Registra su perfil, habilidades e intereses.',
-    feeling: 'Claridad y confianza.',
+    feeling: 'Claridad',
     pain: 'Necesita una guía personalizada.',
-    opportunity: 'Perfilamiento, diagnóstico y matching inteligente.'
+    opportunity: 'Perfilamiento y matching.',
+    emotionLevel: 82
   },
   {
     stage: 'Mejora su perfil',
     action: 'Toma cursos recomendados, ajusta su hoja de vida y aplica mejor.',
-    feeling: 'Avance y motivación.',
+    feeling: 'Motivación',
     pain: 'Necesita seguimiento de su progreso.',
-    opportunity: 'Dashboard de avance y alertas personalizadas.'
+    opportunity: 'Dashboard de avance.',
+    emotionLevel: 88
   },
   {
     stage: 'Accede a mejores oportunidades',
     action: 'Recibe vacantes más compatibles y logra entrevistas.',
-    feeling: 'Confianza y esperanza.',
+    feeling: 'Confianza',
     pain: 'Necesita sostener su proceso.',
-    opportunity: 'Seguimiento, nuevas rutas y conexión continua con empresas.'
+    opportunity: 'Conexión continua con empresas.',
+    emotionLevel: 92
   }
 ];
 

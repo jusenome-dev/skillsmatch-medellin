@@ -1,11 +1,10 @@
 <section class="page-hero compact">
   <span class="eyebrow">Equipo</span>
   <h1>Equipo de trabajo</h1>
-  <p class="hero-lead">Perfil del integrante que lidera la propuesta SkillsMatch Medellín.</p>
+  <p class="hero-lead">Proyecto desarrollado por un integrante único.</p>
   <p>
-    SkillsMatch Medellín es desarrollado como una propuesta académica de emprendimiento de base tecnológica. El proyecto
-    integra análisis del problema, investigación documental, diseño de propuesta de valor, modelo de negocio, prototipo
-    funcional simulado y visión de impacto.
+    SkillsMatch Medellín es desarrollado como una propuesta académica de emprendimiento de base tecnológica por Juan Sebastián
+    Noriega Mendoza, quien integra investigación, diseño de solución, modelo de negocio y prototipo conceptual.
   </p>
 </section>
 
@@ -22,19 +21,27 @@
 </section>
 
 <section class="section team-profile">
-  <div class="image-placeholder portrait">
-    <span>Foto profesional del integrante</span>
-    <small>Preparado para assets/images/perfil-sebastian.jpg</small>
+  <div class="profile-photo">
+    <img
+      *ngIf="!photoMissing"
+      src="assets/images/foto-sebastian.jpg"
+      alt="Foto profesional de Juan Sebastián Noriega Mendoza"
+      (error)="photoMissing = true"
+    />
+    <div class="image-placeholder portrait" *ngIf="photoMissing">
+      <span>JS</span>
+    </div>
   </div>
 
   <article class="profile-card">
-    <span class="badge">Integrante</span>
+    <span class="badge">Integrante único / emprendedor del proyecto</span>
     <h2>Juan Sebastián Noriega Mendoza</h2>
-    <h3>Estudiante de Ingeniería de Sistemas</h3>
+    <h3>Perfil</h3>
     <p>
-      Estudiante de décimo semestre de Ingeniería de Sistemas, con experiencia práctica en desarrollo de software, bases de
-      datos, aplicaciones web y soluciones tecnológicas aplicadas a problemas reales. Su interés está orientado a construir
-      productos digitales útiles, sostenibles y conectados con necesidades concretas del entorno.
+      Estudiante de Ingeniería de Sistemas, con experiencia práctica en desarrollo de software, bases de datos, aplicaciones web
+      y soluciones tecnológicas aplicadas a problemas reales. En este proyecto asume el rol de emprendedor, investigador,
+      diseñador de solución y desarrollador del prototipo web. Este proyecto es desarrollado de manera individual como propuesta
+      académica de emprendimiento de base tecnológica.
     </p>
     <h3>Responsabilidades en el proyecto</h3>
     <ul class="check-list compact">
@@ -61,7 +68,7 @@
   <div class="section-heading">
     <span class="eyebrow">Enlaces</span>
     <h2>Enlaces profesionales</h2>
-    <p>Reemplazar estos enlaces por los enlaces reales antes de publicar la página.</p>
+    <p>Perfil profesional y canales públicos asociados al proyecto.</p>
   </div>
   <div class="link-panel">
     <a class="btn ghost" *ngFor="let link of links" [href]="link.url">{{ link.label }}</a>

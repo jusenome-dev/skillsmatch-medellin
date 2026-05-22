@@ -189,7 +189,4 @@ export class PrototypeComponent {
 
   videoScript =
     'Camila, una joven recién egresada en Medellín, revisa varias plataformas de empleo desde su celular. Encuentra muchas vacantes, pero no sabe cuáles se ajustan realmente a su perfil. Aplica a varias ofertas y no recibe respuesta. Luego conoce SkillsMatch Medellín, registra sus habilidades, identifica sus brechas y recibe rutas de formación y vacantes compatibles. Al final, Camila aplica mejor preparada y logra acceder a entrevistas laborales.';
-
-  videoPrompt =
-    'Crear un video institucional de 70 segundos sobre una solución tecnológica llamada SkillsMatch Medellín. El video debe mostrar el problema de una joven recién egresada en Medellín que busca empleo, aplica a muchas vacantes y no recibe respuesta porque no sabe qué habilidades le faltan. Luego debe presentar una plataforma web que le permite crear su perfil, identificar brechas de habilidades, recibir rutas de formación y encontrar vacantes compatibles. Estilo visual moderno, profesional, urbano, con escenas de Medellín, jóvenes usando computador y celular, dashboard digital, gráficos de habilidades, vacantes compatibles y rutas de aprendizaje. Colores principales: azul, morado y blanco. Tono esperanzador, tecnológico y social. Formato horizontal 16:9, música inspiradora suave y voz en español latino.';
 }

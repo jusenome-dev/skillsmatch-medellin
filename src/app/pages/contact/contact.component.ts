@@ -36,8 +36,8 @@ export class ContactComponent {
   ];
 
   contactDetails: ContactDetail[] = [
-    { label: 'Correo', value: 'correo@ejemplo.com' },
-    { label: 'LinkedIn', value: 'enlace pendiente' },
+    { label: 'Correo', value: 'skillsmatch.medellin@correo.com' },
+    { label: 'LinkedIn', value: 'LinkedIn profesional' },
     { label: 'Ubicación', value: 'Medellín, Colombia' },
     { label: 'Proyecto académico', value: 'Emprendimiento de Base Tecnológica' }
   ];

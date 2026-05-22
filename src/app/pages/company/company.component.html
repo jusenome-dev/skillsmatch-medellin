@@ -9,6 +9,43 @@
   </p>
 </section>
 
+<section class="section diagram-section">
+  <div class="section-heading">
+    <span class="eyebrow">Problema de ciudad</span>
+    <h2>Problema de ciudad que atiende SkillsMatch Medellín</h2>
+    <p>
+      SkillsMatch Medellín parte de un reto de ciudad relacionado con la formación del capital humano, la empleabilidad juvenil
+      y la desconexión entre educación y mercado laboral. El problema se evidencia en jóvenes que terminan sus procesos de
+      formación, pero no tienen claridad sobre las habilidades que exige el mercado ni sobre las brechas que deben cerrar para
+      acceder a mejores oportunidades.
+    </p>
+  </div>
+  <div class="canvas-grid stats-grid">
+    <article class="canvas-block" *ngFor="let stat of cityProblemStats">
+      <span class="badge">Cifra</span>
+      <h3>{{ stat.title }}</h3>
+      <p>{{ stat.text }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <span class="eyebrow">Referentes</span>
+    <h2>Soluciones existentes revisadas</h2>
+  </div>
+  <div class="card-grid">
+    <article class="info-card" *ngFor="let solution of reviewedSolutions">
+      <span class="badge">Solución</span>
+      <h3>{{ solution.title }}</h3>
+      <p>{{ solution.text }}</p>
+    </article>
+  </div>
+  <div class="actions">
+    <a class="btn primary" routerLink="/soluciones-existentes">Ver soluciones existentes</a>
+  </div>
+</section>
+
 <section class="section split-section">
   <div class="section-heading">
     <span class="eyebrow">Empresa</span>

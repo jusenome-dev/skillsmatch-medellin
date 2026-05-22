@@ -1,0 +1,27 @@
+<section class="page-hero compact">
+  <span class="eyebrow">Trazabilidad</span>
+  <h1>Trazabilidad del proceso</h1>
+  <p class="hero-lead">Evolución del proyecto SkillsMatch Medellín desde la semana 10 hasta la entrega web de la semana 15.</p>
+  <p>
+    Esta línea de tiempo funciona como lista de chequeo visual del proceso académico: muestra cómo cada entrega previa alimenta
+    la página web final, el modelo de negocio, el cliente, la propuesta de valor y el prototipo conceptual.
+  </p>
+</section>
+
+<section class="section diagram-section">
+  <div class="section-heading">
+    <span class="eyebrow">Proceso</span>
+    <h2>Línea de tiempo de avance</h2>
+  </div>
+
+  <div class="trace-timeline">
+    <article class="trace-step" *ngFor="let step of steps; let index = index">
+      <span class="trace-dot">{{ index + 1 }}</span>
+      <div>
+        <strong>{{ step.week }}</strong>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.description }}</p>
+      </div>
+    </article>
+  </div>
+</section>
